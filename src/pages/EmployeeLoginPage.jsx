@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import EmployeeLoginForm from '../components/employee/EmployeeLoginForm';
+import LoginHeader from "./common/LoginHeader";
 
 function EmployeeLogin() {
     const [errorMessage, setErrorMessage] = useState('');
@@ -31,6 +32,7 @@ function EmployeeLogin() {
 
     return (
         <div>
+            <LoginHeader />
             <h1>Employee Login</h1>
             {errorMessage && <div>{errorMessage}</div>}
             <EmployeeLoginForm onSubmit={handleLogin} />

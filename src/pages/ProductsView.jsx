@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
+import EmployeeHeader from "./common/EmployeeHeader";
 
 const ProductsView = () => {
     const [products, setProducts] = useState([]);
@@ -12,6 +13,7 @@ const ProductsView = () => {
 
     return (
         <div>
+            <EmployeeHeader />
             <h1>Products</h1>
             <table>
                 <thead>
