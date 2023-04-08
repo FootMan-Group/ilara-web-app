@@ -1,8 +1,11 @@
 import React, { useState } from 'react';
+import {useNavigate} from "react-router-dom";
 
 const CustomerLoginForm = () => {
     const [identification_number, setIdentification_number] = useState('');
     const [password, setPassword] = useState('');
+
+    const navigate = useNavigate();
 
     const handleSubmit = async (event) => {
         event.preventDefault();
@@ -23,6 +26,7 @@ const CustomerLoginForm = () => {
             localStorage.setItem('access_token', data.access);
             localStorage.setItem('refresh_token', data.refresh);
             alert('Successfully logged in');
+            navigate('/customer/me');
         } else {
             alert('Failed to login');
         }

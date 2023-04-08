@@ -3,7 +3,7 @@ import React from 'react';
 function LoginHeader() {
     return (
         <div className="header">
-            <h1>My Application</h1>
+            <h1>Ilara Health Portal</h1>
             <nav>
                 <ul>
                     <li><a href="/employee/login">Employee Login</a></li>

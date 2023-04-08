@@ -30,6 +30,7 @@ function CustomerLogin() {
         }
     };
 
+    console.log(loggedIn);
     if (loggedIn) {
         return <CustomerProfile />;
     }

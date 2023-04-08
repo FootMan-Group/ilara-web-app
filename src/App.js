@@ -5,7 +5,14 @@ import CustomerLogin from './pages/CustomerLoginPage';
 import ProductsView from './pages/ProductsView';
 import AllCustomersView from './pages/ViewAllCustomers';
 import AllTransactionsView from './pages/ViewAllTransactions';
-import ViewAllServices from "./pages/ViewAllServices";
+import ViewAllServices from './pages/ViewAllServices';
+import CustomerProfile from './components/customers/CustomerProfile';
+import CustomerServicesPage from './pages/CustomerServicesPage';
+import CustomerTransactions from './pages/CustomerTransactions';
+import CreateCustomer from './pages/CreateCustomer';
+import ServicePage from './pages/createService';
+import CreateProductPage from './pages/CreateProductPage';
+import CustomerServicePage from './pages/CustomerCreateService';
 
 function App() {
   return (
@@ -17,6 +24,13 @@ function App() {
               <Route path="/customers/all" element={<AllCustomersView />} />
               <Route path="/transactions/all" element={<AllTransactionsView />} />
               <Route path="/services/all" element={<ViewAllServices />} />
+              <Route path="/customer/me" element={<CustomerProfile />} />
+              <Route path="/customer/services" element={<CustomerServicesPage />} />
+              <Route path="/customer/transactions" element={<CustomerTransactions />} />
+              <Route path="/customers/create" element={<CreateCustomer />} />
+              <Route path="/services/create" element={<ServicePage />} />
+              <Route path="/products/create" element={<CreateProductPage />} />
+              <Route path="/customer/service/create" element={<CustomerServicePage />} />
           </Routes>
       </Router>
   );

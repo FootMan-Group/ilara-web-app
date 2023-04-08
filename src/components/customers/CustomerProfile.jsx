@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import CustomerHeader from '../../pages/common/CustomerHeader';
 
 const CustomerProfile = () => {
     const [customer, setCustomer] = useState(null);
@@ -35,7 +36,7 @@ const CustomerProfile = () => {
     }
     try {
         localStorage.setItem('customer_id', customer.customerId);
-        localStorage.setItem('refresh_token', customer.customer_names);
+        localStorage.setItem('customer_names', customer.customer_names);
     }
     catch (e) {
         console.log(e)
@@ -43,10 +44,13 @@ const CustomerProfile = () => {
 
     return (
         <div>
+            <CustomerHeader />
             <h1>Customer Profile</h1>
             <div>ID: {customer.customerId}</div>
             <div>Name: {customer.customer_names}</div>
-            // Add other fields as needed
+            <div>Name: {customer.msisdn}</div>
+            <div>Name: {customer.identification_number}</div>
+            <div>Name: {customer.email}</div>
         </div>
     );
 };
